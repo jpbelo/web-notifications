@@ -10,7 +10,7 @@ The response we get after subscribing is supose to be saved on a database to the
 
 There is a public key (line 4 of main.js) that matches the one in the notification sender service.
 
-## support - i've tested so far
+## support - I've tested so far
 
 | browser | device  | works | doesn't work |
 |---------|---------|-------|--------------|
