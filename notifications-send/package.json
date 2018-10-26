@@ -1,0 +1,20 @@
+{
+  "name": "web-push-codelabd",
+  "version": "0.0.1",
+  "description": "The companion for the web push codelab.",
+  "private": true,
+  "license": "Apache Version 2.0",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js",
+    "deploy": "rsync -avh --exclude=.DS_Store --exclude=node_modules --exclude=README.md --exclude=.git --exclude=.gitignore ./ ovh:/var/www/sb2.joaobelo.pt/html --delete"
+  },
+  "dependencies": {
+    "body-parser": "^1.15.2",
+    "express": "^4.15.4",
+    "web-push": "^3.2.1"
+  },
+  "engines": {
+    "node": "8.x"
+  }
+}
