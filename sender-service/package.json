@@ -1,9 +1,7 @@
 {
-  "name": "web-push-codelabd",
+  "name": "web-notifications-sender",
   "version": "0.0.1",
-  "description": "The companion for the web push codelab.",
-  "private": true,
-  "license": "Apache Version 2.0",
+  "description": "The companion for the web push.",
   "main": "app.js",
   "scripts": {
     "start": "node app.js",

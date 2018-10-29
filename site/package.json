@@ -1,5 +1,5 @@
 {
-  "name": "push-notifications",
+  "name": "web-notifications-site",
   "version": "1.0.0",
   "description": "Push notifications codelab.",
   "scripts": {
@@ -10,14 +10,5 @@
   "devDependencies": {
     "eslint": "^3.8.1",
     "eslint-config-google": "^0.7.0"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/GoogleChrome/push-notifications.git"
-  },
-  "license": "Apache 2",
-  "bugs": {
-    "url": "https://github.com/GoogleChrome/push-notifications/issues"
-  },
-  "homepage": "https://github.com/GoogleChrome/push-notifications#readme"
+  }
 }
