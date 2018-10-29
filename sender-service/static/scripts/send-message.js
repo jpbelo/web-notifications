@@ -1,22 +1,5 @@
 /* eslint-env browser,  es6 */
 
-function getDetails() {
-  const details = window.localStorage.getItem('last-known-details');
-  try {
-    if (details) {
-      return JSON.parse(details);
-    }
-  } catch (err) {
-    // NOOP
-  }
-  return null;
-}
-
-function saveDetails(details) {
-  window.localStorage.setItem('last-known-details',
-    JSON.stringify(details));
-}
-
 function sendPushMessage() {
   const subscriptionTextArea = document.querySelector('#push-subscription');
   const title = document.querySelector('#title');
@@ -28,12 +11,6 @@ function sendPushMessage() {
   const dataString = textToSendTextArea.value;
   const linkToOpenString = linkToOpen.value;
 
-  saveDetails({
-    subscription: subscriptionString,
-    title: titleString,
-    data: dataString,
-    linkToOpen: linkToOpenString
-  });
 
   if (subscriptionString.length === 0 ) {
     return Promise.reject(new Error('Please provide a push subscription.'));
@@ -104,19 +81,6 @@ function initialiseUI() {
       sendBtn.disabled = false;
     });
   });
-
-  const previousDetails = getDetails();
-  if (previousDetails) {
-    const subscriptionTextArea = document.querySelector('#push-subscription');
-    const title = document.querySelector('#title');
-    const textToSendTextArea = document.querySelector('#push-data');
-    const linkToOpen = document.querySelector('#link-to-open');
-
-    subscriptionTextArea.value = previousDetails.subscription;
-    title.value = previousDetails.title;
-    textToSendTextArea.value = previousDetails.data;
-    linkToOpen.value = previousDetails.linkToOpen;
-  }
 
   sendBtn.disabled = false;
 }
